@@ -56,15 +56,15 @@
             >
           </li>
         </ul>
-        <button type="button" class="mobile-menu-open">
+        <button type="button" class="mobile-menu-open" data-menu-open>
           <svg class="mobile-menu-open__icon" width="40" height="40">
             <use href="./imagies/svg/sprite.svg#burger-icon"></use>
           </svg>
         </button>
       </div>
-      <div class="mobile-menu">
+      <div class="mobile-menu" data-menu>
         <div class="mobile-menu__container">
-          <button class="mobile-menu__close-btn">
+          <button class="mobile-menu__close-btn" data-menu-close>
             <svg class="mobile-menu__close-icon" width="40" height="40">
               <use
                 href="./imagies/svg/sprite.svg#icon-modal-close-button"
@@ -72,7 +72,7 @@
             </svg>
           </button>
           <nav class="mobile-menu__page-nav">
-          <div class="mobil-menu-content">
+          <div class="mobil-menu__content">
               <ul class="list mobile-menu__menu">
                 <li class="mobile-menu__menu-item">
                   <a
@@ -117,18 +117,20 @@
                 <li class="mobile-menu__social-item">LinkedIn</li>
               </ul>
             </div>
-          </div>
         </div>
       </div>
     </header>
     <main>
       <!-- HERO -->
-      <!-- <section class="hero section-hero">
+      <section class="hero section-hero">
+        <div class="hero-container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
         <button class="hero-button" type="button" data-modal-open>
           Заказать услугу
         </button>
-      </section> -->
+        </div>
+
+      </section>
       <!-- OUR WORK -->
       <!-- <section class="section">
         <div class="container our-advantages-container">
@@ -682,6 +684,8 @@
         </form>
       </div>
     </div>
+    
     <script src="./js/modal.js"></script> -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
