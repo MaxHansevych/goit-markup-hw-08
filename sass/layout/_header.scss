@@ -46,6 +46,11 @@
 
   .mobile-menu-open__icon {
     fill: var(--primary-text-color);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-text-color);
+    }
   }
 }
 // 768 -1200
