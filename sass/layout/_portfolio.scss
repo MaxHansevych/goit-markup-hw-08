@@ -1,13 +1,15 @@
-.portfolio-button-list {
+@media screen and (min-width: 480px) {
+  .portfolio-button-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     padding-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
-}
+    gap: 15px;
+  }
 
-.portfolio-button {
+  .portfolio-button {
     font-family: inherit;
     color: var(--primary-text-color);
     background-color: var(--subtle-background-color);
@@ -22,37 +24,36 @@
     padding-right: 22px;
     padding-left: 22px;
     transition: color 250ms var(--cubic-bezier),
-        background-color 250ms var(--cubic-bezier),
-        box-shadow 250ms var(--cubic-bezier);
+      background-color 250ms var(--cubic-bezier),
+      box-shadow 250ms var(--cubic-bezier);
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--dark-theme-text);
-            background-color: var(--accent-background-color);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-        }
-}
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--dark-theme-text);
+      background-color: var(--accent-background-color);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    }
+  }
 
-.portfolio-button-item:not(:last-child) {
+  .portfolio-button-item:not(:last-child) {
     margin-right: 8px;
-}
+  }
 
-
-
-.portfolio-card-list {
+  .portfolio-card-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-}
+  }
 
-.portfolio-card-wraper {
+  .portfolio-card-wraper {
     position: relative;
     display: block;
     overflow: hidden;
-}
+  }
 
-.overlay {
+  .overlay {
     color: rgba(255, 255, 255, 1);
     font-size: 18px;
     font-weight: 400;
@@ -71,29 +72,26 @@
     overflow-y: scroll;
     transition: transform 250ms var(--cubic-bezier);
     background-color: rgba(33, 150, 243, 0.9);
-}
+  }
 
-.portfolio-card-link-wraper {
+  .portfolio-card-link-wraper {
     display: block;
     text-decoration: none;
 
     &:hover,
     &:focus {
-        width: 370px;
-        box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06);
+      width: 370px;
+      box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+        0 4px 4px rgba(0, 0, 0, 0.06);
     }
 
     &:hover .overlay,
     &:focus .overlay {
-        transform: translate(0, 0);
+      transform: translate(0, 0);
     }
-}
+  }
 
-
-
-
-
-.portfolio-card-item {
+  .portfolio-card-item {
     border-right: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
@@ -101,9 +99,9 @@
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
-}
+  }
 
-.portfolio-subtitle {
+  .portfolio-subtitle {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -111,13 +109,28 @@
 
     margin-bottom: 4px;
     color: var(--primary-text-color);
-}
+  }
 
-.portfolio-text {
+  .portfolio-text {
     color: var(--light-theme-text);
     line-height: 1.87;
     letter-spacing: 0.03em;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-button-list {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-button-list {
+    // justify-content: center;
+    padding-bottom: 50px;
+  }
 }

@@ -29,6 +29,10 @@
     justify-content: space-between;
     height: 100%;
   }
+  .mobile-menu-open:hover,
+  .mobile-menu-open:focus {
+    fill: var(--accent-background-color);
+  }
 
   .mobile-menu__close-btn {
     position: absolute;
