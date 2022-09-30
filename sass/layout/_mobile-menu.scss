@@ -4,7 +4,6 @@
     z-index: 1000;
     width: 100%;
     height: 100%;
-    max-height: 796px;
     background-color: var(--primary-backdround-color);
     top: 0;
     left: 0;
@@ -49,6 +48,11 @@
     fill: var(--accent-background-color);
   }
 
+  .mobil-menu__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .mobile-menu__page-nav {
     display: flex;
     flex-direction: column;
@@ -136,5 +140,22 @@
     width: 22px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     margin-left: 10px;
+  }
+
+  .current {
+    color: var(--accent-text-color);
+    transition: color 250ms var(--cubic-bezier);
+
+    // &::after {
+    //   content: "";
+    //   width: 100%;
+    //   display: block;
+    //   height: 4px;
+    //   background-color: var(--accent-text-color);
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   border-radius: 2px;
+    // }
   }
 }

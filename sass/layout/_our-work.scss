@@ -1,4 +1,6 @@
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+// @media screen and (max-width: 767px) and (max-width: 1199px) {
+// }
+@media screen and (min-width: 320px) {
   .our-work-list {
     display: none;
   }
@@ -12,7 +14,6 @@
   .our-work {
     padding-bottom: 94px;
   }
-
   .our-work-container {
     align-items: center;
     margin-right: auto;
