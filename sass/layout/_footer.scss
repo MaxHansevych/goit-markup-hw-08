@@ -156,7 +156,7 @@
 }
 
 .footer-form-subscription {
-  width: 100%;
+  width: auto;
 }
 .footer-form-input {
   width: 100%;
@@ -182,6 +182,12 @@
 
 .footer-form-submit-btn__icon {
   margin-left: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .footer-form__subscribtion-email {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
