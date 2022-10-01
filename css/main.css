@@ -244,7 +244,7 @@ body {
     margin-left: auto;
   }
   .header-contacts-item:not(:last-child) {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
   .current {
     color: var(--accent-text-color);
@@ -272,6 +272,9 @@ body {
   }
   .menu-contacts {
     font-size: 14px;
+  }
+  .header-contacts-item:not(:last-child) {
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -924,7 +927,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.03em;
-  width: 450px;
+  max-width: 450px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -985,6 +988,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     text-align: start;
+    justify-content: space-between;
   }
   .footer-form {
     display: flex;
@@ -995,12 +999,6 @@ body {
   }
   .footer-contac-list__item {
     width: max-content;
-  }
-  .footer-contacts-container {
-    margin-right: 70px;
-  }
-  .footer-social-list {
-    margin-right: 94px;
   }
   .footer-form__subscribtion-email {
     margin-right: 12px;
@@ -1131,12 +1129,6 @@ body {
 @media screen and (min-width: 768px) {
   .portfolio-button-list {
     justify-content: center;
-    padding-bottom: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .portfolio-button-list {
-    padding-bottom: 50px;
   }
 }
 .backdrop {

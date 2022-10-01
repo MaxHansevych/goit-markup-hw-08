@@ -173,7 +173,7 @@
   }
 
   .header-contacts-item:not(:last-child) {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
   .current {
     color: var(--accent-text-color);
@@ -205,6 +205,10 @@
 
   .menu-contacts {
     font-size: 14px;
+  }
+
+  .header-contacts-item:not(:last-child) {
+    margin-bottom: 0px;
   }
 }
 
