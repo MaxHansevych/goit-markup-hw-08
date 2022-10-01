@@ -1039,12 +1039,6 @@ body {
   .footer-contacts-container {
     margin-bottom: 0px;
   }
-  .footer-form-subscription {
-    width: 450px;
-  }
-  .footer-form-input {
-    width: 450px;
-  }
 }
 .portfolio-button-list {
   display: flex;
