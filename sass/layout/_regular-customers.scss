@@ -29,7 +29,7 @@
 }
 
 .regular-customer-item {
-  max-width: 210px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
 }
 

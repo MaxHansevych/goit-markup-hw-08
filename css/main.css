@@ -356,7 +356,7 @@ body {
   .mobile-menu__menu-phone {
     color: var(--accent-text-color);
     font-weight: 500;
-    font-size: 40px;
+    font-size: 9.01vw;
     line-height: 1.17;
     letter-spacing: 0.02em;
     display: flex;
@@ -367,7 +367,7 @@ body {
   .mobile-menu__menu-email {
     color: var(--light-theme-text);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 6.01vw;
     line-height: 1.17;
     letter-spacing: 0.02em;
     display: flex;
@@ -762,7 +762,7 @@ body {
 }
 
 .regular-customer-item {
-  max-width: 210px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
 }
 
@@ -1175,39 +1175,47 @@ body {
   pointer-events: none;
 }
 
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-backdround-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.modal-close-button {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.modal-close-button:hover .modal-close-button-icon, .modal-close-button:focus .modal-close-button-icon {
+  fill: var(--accent-background-color);
+}
+
+.modal-close-button-icon {
+  transition: fill 250ms var(--cubic-bezier);
+}
+
 @media screen and (min-width: 480px) {
   .modal {
     position: absolute;
     width: 450px;
     height: 609px;
-    background-color: var(--primary-backdround-color);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .modal-close-button {
-    background-color: transparent;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-  }
-  .modal-close-button:hover .modal-close-button-icon, .modal-close-button:focus .modal-close-button-icon {
-    fill: var(--accent-background-color);
-  }
-  .modal-close-button-icon {
-    transition: fill 250ms var(--cubic-bezier);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1216,155 +1224,166 @@ body {
     height: 581px;
   }
 }
-@media screen and (min-width: 480px) {
-  .modal-form {
-    display: flex;
-    flex-direction: column;
-  }
-  .modal-form-subtitle {
-    color: var(--primary-text-color);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    display: block;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  .modal-form-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid var(--form-input-border-color);
-    border-radius: 4px;
-    padding-left: 42px;
-    font-size: 16px;
-    color: var(--primary-text-color);
-    transition: border-color 250ms var(--cubic-bezier);
-  }
-  .modal-form-input:focus {
-    border-color: var(--accent-background-color);
-    outline: none;
-  }
-  .modal-form-icon {
-    fill: var(--primary-text-color);
-    transition: fill 250ms var(--cubic-bezier);
-  }
-  .modal-form-input:focus + .modal-form-icon {
-    fill: var(--accent-background-color);
-  }
-  .modal-form-input-des {
-    color: var(--light-theme-text);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    margin-bottom: 4px;
-    display: block;
-  }
-  .modal-form-message {
-    width: 100%;
-    height: 120px;
-    resize: none;
-    border: 1px solid var(--form-input-border-color);
-    border-radius: 4px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    transition: border-color 250ms var(--cubic-bezier);
-  }
-  .modal-form-message:focus {
-    border-color: var(--accent-background-color);
-    outline: none;
-  }
-  .modal-form-message::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-  }
-  .modal-form-field {
-    margin-bottom: 10px;
-  }
-  .modal-form-input-wrapper {
-    display: block;
-    position: relative;
-  }
-  .modal-form-icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translate(0, -50%);
-  }
-  .modal-form-checkbox {
-    color: rgb(117, 117, 117);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  .modal-form-checkbox::before {
-    content: "";
-    display: block;
-    border: 2px solid var(--primary-text-color);
-    width: 15px;
-    height: 16px;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-right: 8px;
-    transition: background-color 250ms var(--cubic-bezier), border-color 250ms var(--cubic-bezier);
-  }
-  .modal-form-check:checked + .modal-form-checkbox::before {
-    background-color: var(--accent-background-color);
-    background-image: url(../images/svg/modal-check-mark.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: none;
-  }
-  .modal-form-check:focus + .modal-form-checkbox::before {
-    border: 2px solid var(--primary-text-color);
-  }
-  .modal-form-terms {
-    text-decoration: none;
-    text-decoration-line: underline;
-  }
-  .modal-form-terms::after {
-    content: "";
-    width: 100%;
-    display: block;
-    height: 1px;
-    background-color: var(--accent-text-color);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-radius: 1px;
-  }
-  .modal-form-submit {
-    align-self: center;
-    font-family: inherit;
-    color: var(--dark-theme-text);
-    background-color: var(--accent-background-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition: background-color 550ms var(--cubic-bezier);
-  }
-  .modal-form-submit:hover, .modal-form-submit:focus, .modal-form-submit:active {
-    background-color: #188ce8;
-  }
+.modal-form {
+  display: flex;
+  flex-direction: column;
 }
+
+.modal-form-subtitle {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--form-input-border-color);
+  border-radius: 4px;
+  padding-left: 42px;
+  font-size: 16px;
+  color: var(--primary-text-color);
+  transition: border-color 250ms var(--cubic-bezier);
+}
+.modal-form-input:focus {
+  border-color: var(--accent-background-color);
+  outline: none;
+}
+
+.modal-form-icon {
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--cubic-bezier);
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-background-color);
+}
+
+.modal-form-input-des {
+  color: var(--light-theme-text);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid var(--form-input-border-color);
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: border-color 250ms var(--cubic-bezier);
+}
+.modal-form-message:focus {
+  border-color: var(--accent-background-color);
+  outline: none;
+}
+.modal-form-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+}
+
+.modal-form-checkbox {
+  color: rgb(117, 117, 117);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal-form-checkbox::before {
+  content: "";
+  display: block;
+  border: 2px solid var(--primary-text-color);
+  width: 15px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color 250ms var(--cubic-bezier), border-color 250ms var(--cubic-bezier);
+}
+.modal-form-check:checked + .modal-form-checkbox::before {
+  background-color: var(--accent-background-color);
+  background-image: url(../images/svg/modal-check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+}
+.modal-form-check:focus + .modal-form-checkbox::before {
+  border: 2px solid var(--primary-text-color);
+}
+
+.modal-form-terms {
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: var(--accent-text-color);
+}
+.modal-form-terms::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: var(--accent-text-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+}
+
+.modal-form-submit {
+  align-self: center;
+  font-family: inherit;
+  color: var(--dark-theme-text);
+  background-color: var(--accent-background-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: background-color 550ms var(--cubic-bezier);
+}
+.modal-form-submit:hover, .modal-form-submit:focus, .modal-form-submit:active {
+  background-color: #188ce8;
+}
+
 @media screen and (min-width: 1200px) {
   .modal-form-subtitle {
     line-height: 1.17;
